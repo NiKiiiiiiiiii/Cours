@@ -12,11 +12,16 @@ namespace CourseWork
 {
     public partial class LerningForm : Form
     {
-        public LerningForm()
+        public LerningForm(string url)
         {
             InitializeComponent();
             axWindowsMediaPlayer1.uiMode = "none";
-            axWindowsMediaPlayer1.URL = @"D:\Загрузки\sample.mp4";
+            axWindowsMediaPlayer1.URL = url;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
