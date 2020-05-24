@@ -23,6 +23,8 @@ namespace CourseWork
             MapForm map = new MapForm();
             map.Show();
 
+
+
         }
     }
 }
