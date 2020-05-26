@@ -12,15 +12,16 @@ namespace CourseWork
 {
     public partial class Main : Form
     {
-        public Main()
+        string ctype;
+        public Main(string type)
         {
             InitializeComponent();
-            
+            ctype = type;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MapForm map = new MapForm();
+            MapForm map = new MapForm(ctype);
             map.Show();
 
 

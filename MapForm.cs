@@ -16,13 +16,60 @@ namespace CourseWork
     {
         string path = Directory.GetCurrentDirectory()+ @"\Videos";
         
-        public MapForm()
+        public MapForm(string type)
         {
+            
             InitializeComponent();
-            ImproveSmokesButtons();
-            ImproveFlashesButtons();
-            ImproveMollyButtons();
+            PictureBox[] AllpictureBoxes = {pictureBox1, pictureBox2,pictureBox4,pictureBox7,pictureBox12, pictureBox13,pictureBox14,pictureBox15,
+                pictureBox16,pictureBox17,pictureBox18,pictureBox21,pictureBox23,pictureBox24,pictureBox25,pictureBox26,pictureBox27,pictureBox28,pictureBox29,
+                pictureBox33, pictureBox3,pictureBox8,pictureBox9,pictureBox19,pictureBox22, pictureBox11,pictureBox5,pictureBox6,pictureBox10,pictureBox20,
+                pictureBox30,pictureBox31,pictureBox32,pictureBox34,pictureBox35};
+            PictureBox[] NadespictureBoxes = { pictureBox1, pictureBox2,pictureBox4,pictureBox7,pictureBox12, pictureBox13,pictureBox14,pictureBox15,
+                pictureBox16,pictureBox17,pictureBox18,pictureBox21,pictureBox23,pictureBox24,pictureBox25,pictureBox26,pictureBox27,pictureBox28,pictureBox29,
+                pictureBox33, pictureBox3,pictureBox8,pictureBox9,pictureBox19,pictureBox22, pictureBox11,pictureBox5,pictureBox6,pictureBox10,pictureBox20,
+                pictureBox30,pictureBox31,pictureBox32,pictureBox34};
+            PictureBox[] WallbangspictureBoxes = { pictureBox35 };
+
+
+
+            for (int i = 0; i < AllpictureBoxes.Length; i++)
+            {
+                AllpictureBoxes[i].Visible = false;
+            }
+
+            if (type=="nades")
+            {
+
+                ImproveSmokesButtons();
+                ImproveFlashesButtons();
+                ImproveMollyButtons();
+                for (int i = 0; i < NadespictureBoxes.Length; i++)
+                {
+                    NadespictureBoxes[i].Visible = true;
+                }
+            }
+            if (type== "wallbangs")
+            {
+                for (int i = 0; i < WallbangspictureBoxes.Length; i++)
+                {
+                    WallbangspictureBoxes[i].Visible = true;
+                }
+                ImproveWallbangsButtons();
+            }
            
+           
+        }
+        private void ImproveWallbangsButtons()
+        {
+            System.Drawing.Drawing2D.GraphicsPath myPath = new System.Drawing.Drawing2D.GraphicsPath();
+            myPath.AddEllipse(0, 0, 12, 12);
+            Region myRegion = new Region(myPath);
+            PictureBox[] pictureBoxes = { pictureBox35 };
+            for (int i = 0; i < pictureBoxes.Length; i++)
+            {
+                pictureBoxes[i].Region = myRegion;
+                pictureBoxes[i].BackColor = Color.Black;
+            }
         }
 
         private void ImproveSmokesButtons()

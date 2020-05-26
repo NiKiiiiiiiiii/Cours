@@ -62,6 +62,7 @@
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -96,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -403,6 +405,14 @@
             this.pictureBox34.TabStop = false;
             this.pictureBox34.Click += new System.EventHandler(this.pictureBox34_Click);
             // 
+            // pictureBox35
+            // 
+            this.pictureBox35.Location = new System.Drawing.Point(749, 544);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(24, 25);
+            this.pictureBox35.TabIndex = 36;
+            this.pictureBox35.TabStop = false;
+            // 
             // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +420,7 @@
             this.BackgroundImage = global::CourseWork.Properties.Resources.Map;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1273, 649);
+            this.Controls.Add(this.pictureBox35);
             this.Controls.Add(this.pictureBox34);
             this.Controls.Add(this.pictureBox33);
             this.Controls.Add(this.pictureBox32);
@@ -482,6 +493,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -521,5 +533,6 @@
         private System.Windows.Forms.PictureBox pictureBox32;
         private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.PictureBox pictureBox34;
+        private System.Windows.Forms.PictureBox pictureBox35;
     }
 }
