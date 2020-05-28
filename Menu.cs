@@ -28,5 +28,11 @@ namespace CourseWork
             Main main = new Main("wallbangs");
             main.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Main main = new Main("boost");
+            main.Show();
+        }
     }
 }

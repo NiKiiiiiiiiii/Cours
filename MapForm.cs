@@ -15,6 +15,7 @@ namespace CourseWork
     public partial class MapForm : Form
     {
         string path = Directory.GetCurrentDirectory()+ @"\Videos";
+        string pathw = Directory.GetCurrentDirectory()+ @"\Videos\WB";
         
         public MapForm(string type)
         {
@@ -23,12 +24,16 @@ namespace CourseWork
             PictureBox[] AllpictureBoxes = {pictureBox1, pictureBox2,pictureBox4,pictureBox7,pictureBox12, pictureBox13,pictureBox14,pictureBox15,
                 pictureBox16,pictureBox17,pictureBox18,pictureBox21,pictureBox23,pictureBox24,pictureBox25,pictureBox26,pictureBox27,pictureBox28,pictureBox29,
                 pictureBox33, pictureBox3,pictureBox8,pictureBox9,pictureBox19,pictureBox22, pictureBox11,pictureBox5,pictureBox6,pictureBox10,pictureBox20,
-                pictureBox30,pictureBox31,pictureBox32,pictureBox34,pictureBox35};
+                pictureBox30,pictureBox31,pictureBox32,pictureBox34,pictureBox35,pictureBox36,pictureBox37,pictureBox38,pictureBox39,pictureBox40,pictureBox41,
+                pictureBox42,pictureBox43};
             PictureBox[] NadespictureBoxes = { pictureBox1, pictureBox2,pictureBox4,pictureBox7,pictureBox12, pictureBox13,pictureBox14,pictureBox15,
                 pictureBox16,pictureBox17,pictureBox18,pictureBox21,pictureBox23,pictureBox24,pictureBox25,pictureBox26,pictureBox27,pictureBox28,pictureBox29,
                 pictureBox33, pictureBox3,pictureBox8,pictureBox9,pictureBox19,pictureBox22, pictureBox11,pictureBox5,pictureBox6,pictureBox10,pictureBox20,
                 pictureBox30,pictureBox31,pictureBox32,pictureBox34};
-            PictureBox[] WallbangspictureBoxes = { pictureBox35 };
+            PictureBox[] WallbangspictureBoxes = { pictureBox35,pictureBox36,pictureBox37,pictureBox38,pictureBox39,pictureBox40,pictureBox41,pictureBox42,
+                pictureBox43 };
+            PictureBox[] BoostsPictureboxex = { };
+
 
 
 
@@ -56,15 +61,30 @@ namespace CourseWork
                 }
                 ImproveWallbangsButtons();
             }
+            if (type=="boost")
+            {
+                for (int i = 0; i < WallbangspictureBoxes.Length; i++)
+                {
+                    WallbangspictureBoxes[i].Visible = true;
+                }
+                ImproveBoostButtons();
+            }
            
            
+        }
+        private void ImproveBoostButtons()
+        {
+            System.Drawing.Drawing2D.GraphicsPath myPath = new System.Drawing.Drawing2D.GraphicsPath();
+            myPath.AddEllipse(0, 0, 12, 12);
+            Region myRegion = new Region(myPath);
+            PictureBox[] pictureBoxes = { };
         }
         private void ImproveWallbangsButtons()
         {
             System.Drawing.Drawing2D.GraphicsPath myPath = new System.Drawing.Drawing2D.GraphicsPath();
             myPath.AddEllipse(0, 0, 12, 12);
             Region myRegion = new Region(myPath);
-            PictureBox[] pictureBoxes = { pictureBox35 };
+            PictureBox[] pictureBoxes = { pictureBox35, pictureBox36, pictureBox37, pictureBox38, pictureBox39, pictureBox40,pictureBox41,pictureBox42,pictureBox43 };
             for (int i = 0; i < pictureBoxes.Length; i++)
             {
                 pictureBoxes[i].Region = myRegion;
@@ -110,7 +130,7 @@ namespace CourseWork
                 pictureBoxes[i].BackColor = Color.Red;
             }
         }
-
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             LerningForm lerningForm = new LerningForm(path + @"\StairsSmoke.mp4");
@@ -320,6 +340,60 @@ namespace CourseWork
             LerningForm lerningForm = new LerningForm(path + @"\TopConFromMID.MP4");
             lerningForm.Show();
             
+        }
+      
+        private void pictureBox37_Click_1(object sender, EventArgs e)
+        {
+            LerningForm lerningForm = new LerningForm(pathw + @"\FromToTappsWb.mp4");
+            lerningForm.Show();
+        }
+
+        private void pictureBox35_Click_1(object sender, EventArgs e)
+        {
+            LerningForm lerningForm = new LerningForm(pathw + @"\UnderwoodWb.mp4");
+            lerningForm.Show();
+        }
+
+        private void pictureBox36_Click_1(object sender, EventArgs e)
+        {
+            LerningForm lerningForm = new LerningForm(pathw + @"\FireBoxWb.mp4");
+            lerningForm.Show();
+        }
+
+        private void pictureBox38_Click_1(object sender, EventArgs e)
+        {
+            LerningForm lerningForm = new LerningForm(pathw + @"\UnderwoodWb.mp4");
+            lerningForm.Show();
+        }
+
+        private void pictureBox39_Click_1(object sender, EventArgs e)
+        {
+            LerningForm lerningForm = new LerningForm(pathw + @"\CichenToTappsWb.mp4");
+            lerningForm.Show();
+        }
+
+        private void pictureBox40_Click_1(object sender, EventArgs e)
+        {
+            LerningForm lerningForm = new LerningForm(pathw + @"\TappsToCarWb.mp4");
+            lerningForm.Show();
+        }
+
+        private void pictureBox41_Click_1(object sender, EventArgs e)
+        {
+            LerningForm lerningForm = new LerningForm(pathw + @"\AsiteWb.mp4");
+            lerningForm.Show();
+        }
+
+        private void pictureBox42_Click_1(object sender, EventArgs e)
+        {
+            LerningForm lerningForm = new LerningForm(pathw + @"\UnderWb.mp4");
+            lerningForm.Show();
+        }
+
+        private void pictureBox43_Click_1(object sender, EventArgs e)
+        {
+            LerningForm lerningForm = new LerningForm(pathw + @"\BplantWb.mp4");
+            lerningForm.Show();
         }
     }
 }

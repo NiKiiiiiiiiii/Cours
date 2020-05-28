@@ -21,6 +21,7 @@ namespace CourseWork
             InitializeComponent();
             axWindowsMediaPlayer1.uiMode = "none";
             axWindowsMediaPlayer1.URL = url;
+            
         }
       
 
