@@ -23,9 +23,13 @@ namespace CourseWork
         {
             MapForm map = new MapForm(ctype);
             map.Show();
+            this.Hide();
+            map.Owner = this;
+        }
 
-
-
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

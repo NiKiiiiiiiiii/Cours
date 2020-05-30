@@ -57,12 +57,6 @@ namespace CourseWork
             axWindowsMediaPlayer1.uiMode = "none";
             axWindowsMediaPlayer1.URL = url;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.URL = urlc1;
@@ -75,6 +69,11 @@ namespace CourseWork
             label1.Text = descc2;
             axWindowsMediaPlayer1.URL = urlc2;
             //also change description if needs
+        }
+
+        private void LerningForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

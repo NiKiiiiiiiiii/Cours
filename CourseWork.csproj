@@ -78,12 +78,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LearningFormW.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LearningFormW.Designer.cs">
-      <DependentUpon>LearningFormW.cs</DependentUpon>
-    </Compile>
     <Compile Include="LerningForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,7 +96,6 @@
     <Compile Include="MapForm.Designer.cs">
       <DependentUpon>MapForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CircleButton.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,9 +104,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LearningFormW.resx">
-      <DependentUpon>LearningFormW.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LerningForm.resx">
       <DependentUpon>LerningForm.cs</DependentUpon>
     </EmbeddedResource>

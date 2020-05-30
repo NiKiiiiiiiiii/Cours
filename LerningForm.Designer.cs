@@ -55,7 +55,6 @@
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Description";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -91,6 +90,7 @@
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Name = "LerningForm";
             this.Text = "LerningForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LerningForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
