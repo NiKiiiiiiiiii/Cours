@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CourseWork
 {
@@ -15,6 +16,7 @@ namespace CourseWork
         public MyMainMenu()
         {
             InitializeComponent();
+            openFileDialog1.Filter = "Demo files(*.dem)|*.dem|All files(*.*)|*.*";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -41,5 +43,18 @@ namespace CourseWork
             main.Owner = this;
         }
 
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            var FileName = @"E:\Demowiever\csgoverview\csgoverview.exe";
+            string filename = openFileDialog1.FileName;
+            Process.Start(FileName, filename);
+        }
     }
 }
